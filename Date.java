@@ -28,14 +28,17 @@ class Date {
         this.mois = mois;
     }
 
-
-    public static Double getAnnee (){ return this.annee }
+    public static Double getAnnee (){ return this.annee ;}
     public static int getMois () { return this.mois ;}
     public static int getJour (){ return this.jour; }
 
     public static String toString (){
         System.out.println(this.jour + "/" + this.mois + "/" + this.annee;)
     }
+    public static boolean isBissextile (){
+        return this.Date % 400 == 0;
+    }
+    public static int Nbjours() {
+        return (mois == 4 || mois == 9 || 6 || 11 ) ? 30 : mois != 2 ? 31 :isBissextile(mois) ? 29 : 28;
+    }
 }
-d1 = new Date (9,10,2023)
-d1.toString();
