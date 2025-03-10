@@ -39,6 +39,9 @@ class Date {
         return this.Date % 400 == 0;
     }
     public static int Nbjours() {
-        return (mois == 4 || mois == 9 || 6 || 11 ) ? 30 : mois != 2 ? 31 :isBissextile(mois) ? 29 : 28;
+        return (mois == 4 || mois == 9 || 6 || 11 ) ? 30 : mois != 2 ? 31 : isBissextile(mois) ? 29 : 28;
+    }
+    public boolean estValid(){
+        return mois <= 1 && mois >= 12;
     }
 }
